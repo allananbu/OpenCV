@@ -30,7 +30,7 @@ im=mask_img
 color=('b','g','r')
 
 for i,col in enumerate(color):
-    hist_cal=cv2.calcHist([im],[i],None,[256],[0,256])
+    hist_cal=cv2.calcHist([im],[i],black,[256],[0,256])
     plt.plot(hist_cal,color=col)
     plt.xlim([0,200])
     plt.ylim([-100,5000])
