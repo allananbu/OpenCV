@@ -10,7 +10,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 
-img = cv2.imread('enterprise.jpg')
+img = cv2.imread('gorila.jpg')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 filt = cv2.GaussianBlur(gray,(3,3),0)
@@ -23,3 +23,14 @@ plt.subplot(2,1,2),plt.imshow(sobely,cmap = 'gray')
 plt.title('Sobel Y'), plt.xticks([]), plt.yticks([])
 
 plt.show()
+
+#blurred_img=cv2.blur(img,ksize=(5,5))
+#median_pix=np.median(img)
+#
+##select threshold
+#lower = int(max(0,0.7*median_pix))
+#upper = int(min(255,1.3*median_pix))
+#edges=cv2.Canny(image=blurred_img,threshold1=lower,threshold2=upper)
+#
+#
+#plt.imshow(edges)

@@ -21,15 +21,24 @@ def disp_im(im):
 
 i=load()
 font=cv2.FONT_HERSHEY_COMPLEX
-cv2.putText(i,text='blue bricks',org=(20,100),fontFace=font,fontScale=2,color=(255,0,0),thickness=2)
+cv2.putText(i,text='USS Enterprise',org=(180,800),fontFace=font,fontScale=10,color=(255,0,0),thickness=4)
 
-#gamma=4
+#gamma=2
 #
 #new_im=np.power(i,gamma)
 #
 #
-#disp_im(i)
+#disp_im(new_im)
    
-kernel=np.ones(shape=(5,5),dtype=np.float32)/25
-dst=cv2.filter2D(i,-1,kernel)
-disp_im(dst)
+#kernel=np.ones(shape=(3,3),dtype=np.float32)/25
+#dst=cv2.filter2D(i,-1,kernel)
+#disp_im(dst)
+
+#blurred=cv2.blur(i,ksize=(5,5))
+#disp_im(blurred)
+
+#blur2=cv2.GaussianBlur(i,(5,5),10)
+#disp_im(blur2)
+
+blur3=cv2.medianBlur(i,5)
+disp_im(blur3)

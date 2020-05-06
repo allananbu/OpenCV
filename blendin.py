@@ -12,17 +12,17 @@ import cv2
 im=cv2.imread('enterprise.jpg')
 im=cv2.cvtColor(im,cv2.COLOR_BGR2RGB)
 im1=cv2.imread('do.jpg')
-im1=cv2.cvtColor(im2,cv2.COLOR_BGR2RGB)
+im1=cv2.cvtColor(im1,cv2.COLOR_BGR2RGB)
 
 
 #resize
 
 #im=cv2.resize(im,(1200,1200))
-im1=cv2.resize(im1,(1200,1200))
-
-
-#y=alp*src1+beta*src2+gamma
-#blend=cv2.addWeighted(src1=im,alpha=0.9,src2=im1,beta=0.1,gamma=0)
+#im1=cv2.resize(im1,(1200,1200))
+#
+#
+##y=alp*src1+beta*src2+gamma
+#blend=cv2.addWeighted(src1=im,alpha=0.7,src2=im1,beta=0.3,gamma=0.5)
 #
 #plt.imshow(blend)
 

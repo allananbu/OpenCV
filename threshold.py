@@ -10,9 +10,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 im=cv2.imread('cross.jpg',0)
+plt.imshow(im,cmap='gray')
 
-ret,tres= cv2.threshold(im,128,255,cv2.THRESH_BINARY_INV)
-ret1,tres1= cv2.threshold(im,128,255,cv2.THRESH_BINARY)
+#ret,tres= cv2.threshold(im,128,255,cv2.THRESH_BINARY)
+#ret1,tres1= cv2.threshold(im,128,255,cv2.THRESH_BINARY)
 
 #plt.imshow(tres,cmap='gray')
 

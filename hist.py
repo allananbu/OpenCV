@@ -19,10 +19,10 @@ rain=cv2.imread('rainbow.jpg')
 show_rain=cv2.cvtColor(rain,cv2.COLOR_BGR2RGB)
 
 
-black=np.zeros(rain.shape[:2],np.uint8)
+black=np.zeros(brick.shape[:2],np.uint8)
 black[80:200,150:300]=255
 
-mask_img=cv2.bitwise_and(rain,rain,mask=black)
+mask_img=cv2.bitwise_and(brick,brick,mask=black)
 
 
 
@@ -33,5 +33,5 @@ for i,col in enumerate(color):
     hist_cal=cv2.calcHist([im],[i],black,[256],[0,256])
     plt.plot(hist_cal,color=col)
     plt.xlim([0,200])
-    plt.ylim([-100,5000])
+    plt.ylim([-100,2000])
 #hist_cal=cv2.calcHist(black,channels=[0],mask=None,histSize=[256],ranges=[0,256])
